@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import minimist from "minimist";
-import { rpsls } from "node-rpsls";
+import { playRpsls } from "node-rpsls";
 
 const args = minimist(process.argv.slice(2));
 
