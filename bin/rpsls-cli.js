@@ -6,10 +6,10 @@ import { playRpsls } from '../lib/rpsls.js';
 const args = minimist(process.argv.slice(2));
 
 if (args.help_message || args.h){
-    console.log(help_message);
+    help_message();
     process.exit(0);
 }
-if (args.rules || args.s) {
+if (args.rules || args.r) {
     console.log(rules);
     process.exit(0);
 }
@@ -21,7 +21,7 @@ try{
 } catch (e) {
     help_message()
     rules()
-    process.exit(0)
+    process.exit(1)
 }
 
 function help_message() {
@@ -35,7 +35,7 @@ Examples:
   node-rpsls        Return JSON with single player RPSLS result.
                     e.g. {"player":"rock"}
   node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
-                    e.g {"player":"rock","opponent":"Spock","result":"lose"}`)
+                    e.g {"player":"rock","opponent":"Spock","result":"lose"}`);
 }
 
 function rules(){
@@ -50,5 +50,5 @@ console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 - Lizard EATS Paper
 - Paper DISPROVES Spock
 - Spock VAPORIZES Rock
-- Rock CRUSHES Scissors`)
+- Rock CRUSHES Scissors`);
 }
