@@ -16,12 +16,12 @@ if (args.rules || args.s) {
 
 const shot = args._[0]
 try{
-    gameObject = playRps(shot)
-    console.log(JSON.stringify(playRps(gameObject)));
+    //gameObject = playRps(shot)
+    console.log(JSON.stringify(playRps(shot)));
 } catch (e) {
-    help_message()
-    rules()
-    process.exit(0)
+    help_message();
+    rules();
+    process.exit(0);
 }
 
 // for help
