@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import minimist from "minimist";
-import { rpsls } from "node-rpsls";
+import { playRpsls } from "node-rpsls";
 
 const args = minimist(process.argv.slice(2));
 
@@ -16,8 +16,8 @@ if (args.rules || args.s) {
 
 const shot = args._[0]
 try{
-    gameObject = rpsls(shot)
-    console.log(JSON.stringify(rpsls(gameObject)));
+    gameObject = playRpsls(shot)
+    console.log(JSON.stringify(playRpsls(gameObject)));
 } catch (e) {
     help_message()
     rules()
