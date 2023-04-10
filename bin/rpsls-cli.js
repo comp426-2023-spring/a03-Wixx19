@@ -10,7 +10,7 @@ if (args.h || args.help){
     process.exit(0);
 }
 if (args.r|| args.rules) {
-    console.log(rules);
+    rules();
     process.exit(0);
 }
 

@@ -6,11 +6,11 @@ import { playRps } from '../lib/rpsls.js';
 const args = minimist(process.argv.slice(2));
 
 if (args.help_message || args.h){
-    console.log(help_message);
+    help_message();
     process.exit(0);
 }
 if (args.rules || args.s) {
-    console.log(rules);
+    rules();
     process.exit(0);
 }
 
