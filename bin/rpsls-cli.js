@@ -5,11 +5,11 @@ import { playRpsls } from '../lib/rpsls.js';
 
 const args = minimist(process.argv.slice(2));
 
-if (args.help_message || args.h){
+if (args.h || args.help){
     help_message();
     process.exit(0);
 }
-if (args.rules || args.r) {
+if (args.r|| args.rules) {
     console.log(rules);
     process.exit(0);
 }
