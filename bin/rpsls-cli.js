@@ -21,7 +21,7 @@ try{
 } catch (e) {
     help_message();
     rules();
-    process.exit(1);
+    process.exit(0);
 }
 
 function help_message() {
